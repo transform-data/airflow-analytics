@@ -10,7 +10,7 @@ from airflow.models import Variable
 TRANSFORM_API_KEY = Variable.get('TRANSFORM_API_KEY')
 @dag(
  dag_id="materialize_sales_metrics",
-    schedule_interval="0 0 * * *",
+    schedule_interval="0 * * * *",
     start_date=pendulum.datetime(2021, 1, 1, tz="UTC"),
     catchup=False,
     dagrun_timeout=datetime.timedelta(minutes=60),
