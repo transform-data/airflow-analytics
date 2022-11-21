@@ -1,0 +1,8 @@
+venv
+.env
+airflow.cfg
+airflow.db
+docker-compose.yaml
+DockerFile
+webserver_config.py
+logs
