@@ -17,7 +17,7 @@ def run_materialization():
             print("Runtime error",err)
             fail +=1
         except Exception as err:
-            print(f"Unexpected {err=}, {type(err)=}")
+            print(f"Unexpected {err}, {type(err)}")
             fail += 1
     print(f"Successful materialization: {success}. Failed materialization: {fail} ")
 
