@@ -15,7 +15,6 @@ TRANSFORM_API_KEY = Variable.get('TRANSFORM_API_KEY')
     catchup=False,
     dagrun_timeout=datetime.timedelta(minutes=60),
 )
-#todo: figure out how to run start and end date for materializations based of most recent timestamp for each materialization.
 def RunMaterialization():
     @task
     def run_materialization():
