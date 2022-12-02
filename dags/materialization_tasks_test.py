@@ -14,8 +14,8 @@ TRANSFORM_API_KEY = Variable.get('TRANSFORM_API_KEY')
 mql = MQLClient(TRANSFORM_API_KEY)
 materialization_list = mql.list_materializations()
 with DAG(
-    dag_id="materialize_sales_metrics",
-    schedule_interval="0 0 * * *",
+    dag_id="materialize_sales_metrics_test",
+    schedule_interval="0 * * * *",
     start_date=pendulum.datetime(2021, 1, 1, tz="UTC"),
     catchup=False,
     dagrun_timeout=datetime.timedelta(minutes=60),
